@@ -1,15 +1,15 @@
 const express = require('express');
 
+const {catQueue} = require('../utils/testQueue');
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json({
-    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: 'Fluffy',
-    sex: 'Female',
-    age: 2,
-    breed: 'Bengal',
-    story: 'Thrown on the street'
-  });
+router.get('/', (req, res, next) => {
+  res.json(catQueue.peek());
 });
+
+router.delete('/', (req, res, next) => {
+  res.json(catQueue.dequeue());
+});
+
+module.exports = router;
