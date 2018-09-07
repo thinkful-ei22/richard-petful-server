@@ -76,7 +76,7 @@ catQueue.enqueue({
 catQueue.enqueue({
   imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
   imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-  name: 'Fluffy',
+  name: 'Fluffy2',
   sex: 'Female',
   age: 2,
   breed: 'Bengal',
